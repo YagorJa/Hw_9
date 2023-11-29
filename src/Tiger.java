@@ -1,16 +1,16 @@
 public class Tiger extends Animal {
-    private final String tiger = "Tiger";
-
     public void voice() {
-        System.out.println(tiger + " is roaring");
+        System.out.println("Tiger is roaring");
     }
 
-    public void eat(String food) {
-        this.setFood(food);
-        if (food.equals("Grass")) {
-            System.out.println(tiger + " isn`t satisfied!");
-        } else if (food.equals("Meat") || food.equals("Bone")) {
-            System.out.println(tiger + " is happy");
-        } else System.out.println(tiger + " does not know what it is");
+    public void eat(FoodType food) {
+        super.setFood(food);
+        if (food == FoodType.GRASS) {
+            System.out.println("Tiger isn't satisfied!");
+        } else if (food == FoodType.MEAT || food == FoodType.BONE) {
+            System.out.println("Tiger is happy");
+        } else {
+            System.out.println("Tiger does not know what it is");
+        }
     }
 }
