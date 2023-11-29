@@ -1,16 +1,17 @@
 public abstract class Animal {
- private String food;
+ private FoodType food;
 
- public String getFood() {
+ public FoodType getFood() {
   return food;
  }
 
- public void setFood(String food) {
+ public void setFood(FoodType food) {
   this.food = food;
  }
 
- public void voice(){}
- public void eat(String food){
-  this.food = food;
+ public  void voice(){};
+
+ public void eat(FoodType food) {
+  this.setFood(food);
  }
 }

@@ -1,14 +1,16 @@
 public class Rabbit extends Animal{
-    private final String rabbit = "Rabbit";
-    public void voice(){
-        System.out.println( rabbit + " is whispering");
+    public void voice() {
+        System.out.println("Rabbit is whispering");
     }
-    public void eat(String food){
-        this.setFood(food);
-        if (food.equals("Meat") || food.equals("Bone")) {
-            System.out.println(rabbit + " isn`t satisfied!");
-        }else if (food.equals("Grass") || food.equals("Carrot")) {
-            System.out.println(rabbit + " is happy");
-        }else System.out.println(rabbit + " does not know what it is");
+
+    public void eat(FoodType food) {
+        super.setFood(food);
+        if (food == FoodType.MEAT || food == FoodType.BONE) {
+            System.out.println("Rabbit isn't satisfied!");
+        } else if (food == FoodType.GRASS || food == FoodType.CARROT) {
+            System.out.println("Rabbit is happy");
+        } else {
+            System.out.println("Rabbit does not know what it is");
+        }
     }
 }

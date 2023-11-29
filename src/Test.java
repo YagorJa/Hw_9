@@ -3,11 +3,13 @@ public class Test {
     Rabbit rabbit = new Rabbit();
     Tiger tiger = new Tiger();
     Dog dog = new Dog();
-        dog.eat("Bone");
+        dog.eat(FoodType.BONE);
         dog.voice();
-        tiger.eat("Meat");
+
+        tiger.eat(FoodType.MEAT);
         tiger.voice();
-        rabbit.eat("Carrot");
+
+        rabbit.eat(FoodType.CARROT);
     }
 
 }
