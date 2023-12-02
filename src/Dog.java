@@ -1,7 +1,17 @@
-public class Dog extends Animal{
-    public void voice(){
+public class Dog extends Animal {
+    //private String breed;
+
+    private Dog() {
+       // this.breed = breed;
+    }
+    public static Dog dogBorn(){
+        return new Dog();
+    }
+
+    public void voice() {
         System.out.println("Dog is barking");
     }
+
     public void eat(FoodType food) {
         this.setFood(food);
         if (food == FoodType.GRASS) {
